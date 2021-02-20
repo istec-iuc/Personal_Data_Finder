@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ISTEC</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>ISTEC Kişisel Veri Algılayıcı</h1>
+      <p>
+        ISTEC PDD, csv dosyası olarak verilen anahtar kelimelere ve/veya düzenli
+        ifadelere göre eşleşme yakalar. PDF ve görüntü dosyalarında arama yapar
+        ve bu dosyalara bir klasör içerisinde sınıflandırarak hangi dosyada ne
+        tür kişisel veri bulunduğunu gösteren bir csv çıktı üretir.
+      </p>
+      <h3>Ön Koşullar</h3>
+      <ol>
+        <li>
+          <a href="https://www.python.org/">Python</a> kurulumunu
+          gerçekleştirin.
+        </li>
+        <li>
+          <a href="https://digi.bib.uni-mannheim.de/tesseract/">Tesseract</a>
+          kütüphanesini bilgisayarınıza yükleyin.
+        </li>
+        <li>
+          Gerekli Python paketlerini, aşağıdaki komutu terminalde çalıştırarak
+          kurun.
+        </li>
+        <code>pip3 install -r requirements.txt</code>
+      </ol>
+      <h3>Nasıl Çalışır?</h3>
+      <p>
+        Ön koşulları tamamladıkran sonra klasörde terminali açın ve aşağıdaki
+        komutu isteğinize göre şekillendirerek çalıştırın.
+      </p>
+      <ul>
+        <code
+          >python3 main.py -p &lt;path&gt; -k &lt;keywords.csv&gt; -r
+          &lt;patterns.txt&gt; -m
+        </code>
+        <li>
+          -p &lt;path&gt; paremetresi ile programın analiz edeceği klasörün yolu
+          verilir. (Zorunlu)
+        </li>
+        <li>
+          -k &lt;keywords.csv&gt; parametresi ile csv formatında anahtar
+          kelimelerin bulunduğu dosyanın yolu belirtilir. (İsteğe Bağlı)
+        </li>
+        <li>
+          -r &lt;patterns.txt&gt; parametresi ile düzenli ifadelerin bulunduğu
+          dosyanın yolu belirtilir. (İsteğe Bağlı)
+        </li>
+        <li>
+          -m parametresi verilirse dosyalar bulunduğu konumdan taşınır, bu
+          parametre verilmez ise dosyaların yapısı korunur ve kopyası
+          oluşturulur.
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

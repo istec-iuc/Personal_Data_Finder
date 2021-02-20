@@ -1,0 +1,4 @@
+opencv-python
+pytesseract
+tika
+pdf2image
