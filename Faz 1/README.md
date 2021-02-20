@@ -13,11 +13,17 @@ tür kişisel veri bulunduğunu gösteren bir csv çıktı üretir.
     kütüphanesini bilgisayarınıza yükleyin.
 3.  Gerekli Python paketlerini, aşağıdaki komutu terminalde çalıştırarak
     kurun.
+```
+pip3 install -r requirements.txt
+```
 
 ### Nasıl Çalışır?
 
 Ön koşulları tamamladıkran sonra klasörde terminali açın ve aşağıdaki
 komutu isteğinize göre şekillendirerek çalıştırın.
+```
+python3 main.py -p <path> -k <keywords.csv> -r <patterns.txt> -m
+```
 
 -   -p \<path\> paremetresi ile programın analiz edeceği klasörün yolu
     verilir. (Zorunlu)
